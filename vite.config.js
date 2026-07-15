@@ -1,11 +1,7 @@
 import { defineConfig } from 'vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
+import react from '@vitejs/react-refresh' // or '@vitejs/plugin-react' depending on your installation
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] })
-  ],
+  plugins: [react()],
+  base: '/City_Corporation_Swimming_Pool/', // Add your exact repository name here wrapped in slashes
 })
